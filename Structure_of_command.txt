@@ -1,0 +1,18 @@
+Syntax:
+command options arguments
+command arguments options 
+
+1) ls 
+2) ls -l (command with options)
+3) ls /home/virendra/Desktop ( command with arguments)
+4) ls -l /home/virendra/Desktop ( command with arguments and options)
+5) ls -l -a (-a displays hidden files and folders)
+6) ls -la  (options can be combined)
+7) date ( gives date and time)
+8) date -d yesterday 
+9) cal (shows current calendar)
+10) cal -y  ( shows calendar of whole year)
+11) bc (calculator)  
+    45 + 30 and press enter
+    quit  (quit the calcualtor)
+12) pwd  (shows current directory)

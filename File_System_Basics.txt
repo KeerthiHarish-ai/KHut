@@ -1,0 +1,57 @@
+1) ls /usr/bin
+2) pwd
+
+Creating files and directories:
+1) mkdir test ( here test is name of directory you creating)
+2) ls 
+to verify you can click on the files icon on left side you will see folder created there.
+3) cd test
+4) pwd
+5) gedit name.txt  (create a new file as name.txt)
+   editor will open and add (20 lines)  --> save  --> close it
+6) ls (you will see new file name.txt will be created)
+7) cat name.txt  ( show contents on the screen)
+8) head name.txt (this will show first 10 lines of the file)
+9) head -5 name.txt (dsiplays first 5 lines only)
+10) tail name.txt  (this will show last 10 lines of the file)
+11) nl name.txt (similar to cat command but gives the line number also)
+12) cd ..  ( moves to parent directory)
+13) gedit second.txt  (create a new file second.txt)
+14) ls ( you will seee file second.txt getting created along with Desktop )
+
+Copy:
+1) cp name.text first.txt ( copy the contents from name ot first file)
+2) cp second.txt  test/second.txt (moves second.txt from parent to test folder)
+3) cd test 
+4) ls  (you will see second.txt will be created there)
+you are in test directory now..
+5) cp /home/virendra/third.txt  third.txt
+(it copies the thrid.txt from parent directory to the current test directory)
+6) ls  ( it shows the thrid.txt file under the test directory)
+
+Move:
+1) you are in test directory now.
+2) mv /home/virendra/spells.txt spells.txt
+(this moves the spells.txt from the parent directory to the current test directory)
+3) ls /home/virendra
+(you will see the spells.txt is not there in parent directory)
+
+Rename:
+1) you are in test directory now.
+2) mv spells.txt characters.txt 
+(it will rename from spells to characters file)
+3) ls   ( the file name is changed)
+
+Remove:
+1) you are in test directory now.
+2) rm third.txt (it will delete the file from directory)
+or
+2) rm -i third.txt (here 'i' means it will ask user before deleting it , type y)
+3) create a new directory 'sample'
+   rmdir sample  (it will remove the directory sample)
+4) rmdir test
+(it will throw error you cannot delete directory)
+5) rm -i -r test  (it will ask you to delete all the files within the directory)
+  enter 'n' (not to delete it)
+
+

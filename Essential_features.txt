@@ -1,0 +1,141 @@
+Apt command to search, install, update and remove packages:
+1) apt search serial   ( this displays all of the packages)
+2) apt show setserial  (to get information of a specific package)
+3) setserial --version ( to check if this package is installed or not)
+4) sudo apt install setserial  ( to install this setserial package)
+5) setserial --version ( now check version)
+6) sudo apt update  (to get the latest update on the package setserial)
+7) sudo apt upgrade  (do this on weekly basis)
+8) Dont** if you require:  sudo apt remove setserial (removal of package)
+
+==================================================================================
+
+Linux commands:
+1) cd practise/editors
+2) ls -l  
+
+Word count:  wc <filename>
+eg: wc filea.txt
+236  945  8086  filea.txt  (here 236=lines , 945=words , 8086 chracters)
+
+number of lines:  wc -l  <filename>
+number of words:  wc -w  <filename> 
+number of chars:  wc -c  <filename> 
+
+touch: it updates the timestamp to the current timestamp of the existing file and if the file is not created it will create that new file also.
+Syntax:  touch <filename1>, <filename2>,...
+
+memory used in kB:  ls -lh 
+
+inode number of every file:  ls -il
+it is the unique identifier mapped with every file stored in the harddrive
+
+wildcard (*) : ls file*
+it gives any file starts with wildcard   
+
+alias:  alias c="clear"   (this will create shortform c for clear the screen)
+this command is used to create shot form of the big commands.
+
+remove alias:  unalias c 
+this will remove the alias created above.
+
+hostname of the machine:  hostname
+
+history of commands used:  history
+
+=========================================================================================
+
+Find Files:
+
+1) cd practise/editors
+2) find /home/virendra -name "name.txt" 
+   ( it will search for all the directories and sub-directories of the virendra)
+3) find /home/virendra -name "*.txt"  
+   ( to find all the files ending with .txt)
+4) find /home/virendra -type d  ( specifies we are looking for the directory)
+5) find /home/ajay -type f -perm 644  
+   ( this will search for all files with permissions 644 in ajay directory)
+
+=========================================================================================
+
+Pipes:
+
+1) cd test
+2) ls
+3) head characters.txt | wc 
+   (this means it will first find first 10 lines of the file that will be added to the  another command wc as an input. means it will find words count for first 10lines of hte file)
+
+=========================================================================================
+
+Grep:
+
+1) cd test
+2) ls
+3) grep "learning" characters.txt
+   (this will find the word "learning" in the file above)
+4) grep -n "learning" characters.txt
+   (this will provide the line number also with the word "learning" in the file above)
+5) grep "learn" characters.txt
+   (this will find the half word "learn" in the file 
+6) grep -i "learn" characters.txt
+   (case insensitive to find whether uppercase or lowercase.this will find the word "learn" in the file above)
+7) grep -i -w "learn" characters.txt
+   (this will find the uppercase or lowercase exact word "learn" not half word"
+8) grep -v m characters.txt  
+   ( this will give all lines except which have the letter 'm' somewhere in them)
+
+============================================================================================
+
+Tar and Zip:
+
+1) cd practise/editors
+2) tar cf file.tar FifthBeatles.txt beatles.txt
+   (this will compress the two files mentioned above and put into the archive file.tar)
+3) ls   ( this will show the file.tar in the list)
+4) tar caf file.gz FifthBeatles.txt beatles.txt
+   (this will tell 'a' letter in caf tell which type of compression to be used)
+5) ls -lh
+   ( you can check the size of compressed files here)
+6) zip file FifthBeatles.txt beatles.txt
+   ( this will create zipped file)
+7) ls -lh
+
+unpacking archived/zipped:
+we will not unpack in same directory of editors because after unpacking it will replace the previous files os data losses chances are higher. to avoid this we will create a new directory and unapck over there
+
+Syntax: 
+(a) tar xf file.gz -C directoryname
+(b) tar xf file.bz2 -C directoryname
+(c) unzip file.zip -d directoryname
+
+1) cd practise/editors
+2) mkdir one
+3) tar xf file.tar -C /home/virendra/practise/one
+   (here x stands for extract and -C tell path or name of directory where you want to extract
+    here one is the directory which we created)
+4) cd one
+5) ls -l
+
+=================================================================================
+
+Links:
+Hard link is having same size of the file
+Soft link only stores the address of the file as a pointer so size of soft file is very small
+1) cd practise/editors
+2) ls
+3) ln beatles.txt filex          ( this will create hard link)
+4) ln -s FifthBeatles.txt filey  ( this will create the soft link)
+5) ls -l
+6) ls -li     (this will give the file with i-node number)
+   ( you will notice filex and beatles.txt will have same node number)
+
+=================================================================================
+
+Environment variables:
+echo: it is used to print the value of a variable onto the screen
+
+1) echo $SHELL
+2) env     ( this will give list of the environment variables)
+3) echo $LOGNAME
+4) echo "good day"
+5) echo $HOME

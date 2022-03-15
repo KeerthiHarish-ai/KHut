@@ -1,0 +1,70 @@
+1) ps    (it displays the processes running in background)
+2) ps -a (it will display any hidden process as well)
+3) ps -A 
+4) ps -aux  ( complete information about the processes)
+5) ps -C bash (it will search for all processes named as bash)
+6) ps -C bash -o pid, ppid, stime, etime,cmd  (giving the information of the time of the process running)
+
+=======================================================================================
+
+Managing process:
+1) cd practise
+2) mkdir proc
+3) vim one.sh  ( create a shell script with name one.sh)
+#!/bin/bash
+
+i=0
+
+while true
+do
+   echo "$$ running since $i seconds"
+   let "i=i+1"
+   sleep 1
+done
+(save and exit)
+4) ls -l            (we will notive this one.sh doesnt have executable permissions)
+5) chmod +x one.sh  (added the permissions)
+6) ./one.sh  ( running the script from the currrent directory)
+7) open new terminal to check this process running status
+
+New terminal:
+(a) ps aux
+(b) ps -A   
+(c) kill -SIGTERM <process id>   ( here eg: 4560)
+
+
+====================================================================================================
+terminal (1)
+Background processes:
+1) cd practise
+2) cd proc
+3) ls
+4) vi two.sh
+#!/bin/bash
+
+i=0
+
+while [ $i -eq 0]
+do
+   echo "$$ running since $i seconds"
+   i=0
+done
+(save and exit)
+5) chmod +x two.sh
+6) ./two.sh
+7) ctrl +c  ( to stop process)
+8) ./two.sh &   ( this puts the process with PID into background)
+9) ./one.sh  ( the process will start running with PID_number)
+open new terminal to check this process running status
+
+
+New terminal(2):
+(a) kill -SIGSTOP PID_number     (running above in one.sh)
+(b) ps -ax   ( we will see this one.sh is in T state and sleep)
+
+Terminal(1):
+1) ps  (  it will show all the background processes running in background)
+2) jobs  (this will show numbers in [i] which means the job id)
+3) fg  i (here 1 is the job id in [i] to bring the running process in forgraound)
+4) Ctr +C  ( to terminate this) 
+5) fg i ( to pull the stopped process in foreground which was in stopped state)

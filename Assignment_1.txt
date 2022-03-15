@@ -1,0 +1,17 @@
+The web development team has requested that you create a directory structure and some placeholderfiles for their new web site application on the CentOS server you created for them previously. Please create the following 
+directories:
+/development
+/development/website
+/development/website/images
+/development/website/test
+
+1) create a file called index.txt within the website directory and enter the your resume within 15 lines in the file
+2) create a file country.txt within the test directory and enter the some 10 countries names in the file line by line
+3) copy the file country.txt and index.txt both to images directory
+4) move the file country.txt to website directory
+5) rename the file index.txt to sample.txt
+6) create a file fruits.txt within development directory and add around 10 fruits description lines into it
+7) copy the fruits.txt to images directory
+8) delete the directory test
+
+9) open the vim editor in development directory and do operations (1) and (2) above same

@@ -1,0 +1,44 @@
+to install vim editor:
+1) vim --version ( check whether vim editor is there or not)
+2) sudo apt install vim
+   it will ask for password :(type linux password to unlock screen)
+3) press y
+(installation done)
+
+Practise of VIM:
+1) mkdir practise
+2) cd practise/  
+3) mkdir editors  ( create a sub-directory under practise)
+4) cd editors 
+
+(Case 1: when you give file name with the vim editor)
+5) vim beatles.txt  ( this will launch vim editor with file name beatles)
+   (a) press i (INSERT mode)
+       Viren Sharma
+       Hello World
+   (b) press Esc + :w ( to save the file data written into)
+   (c) press i  (INSERT mode)
+       You are amazing
+   (d) Esc + :wq  ( save and exit the vim editor)
+6) ls  ( you will see beatles.txt will be created)
+7) vim beatles.txt  ( to reopen the file) 
+8) to move the cursor in vim editor
+    - j -> next line
+    - k -> previous line
+    - l -> moving left
+    - h -> moving right
+9) Esc + :q!  ( it means it will not save the data and it will exit)
+10) cat beatles.txt
+
+(Case 2: when you just open vim editor)
+11) vim
+enter some data into it 
+12) Esc + :wq FifthBeatles.txt
+13) vim FifthBeatles.txt
+    Viren Sharma
+    Hello World
+    Today is Day2
+    We are studying Linux
+14) press dd  and then press dd ( it will remove the line where the cursor is)
+15) press u  (it will undo the removal)
+
